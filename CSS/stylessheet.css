@@ -1,0 +1,372 @@
+/*CSS of the body
+sets backgorund image and a default font for the whole page 
+this is common for all pages*/
+@font-face {
+    font-family: "Silkscreen";
+    src: url('../Extras/Silkscreen/slkscr.ttf');
+}
+body{
+    margin: 0;
+    background-image: url('../Images/space2.png');
+    font-family: "Silkscreen";                                         
+}
+/*CSS for a selected tab 
+whenever a tab is selected, the tab name will be in teal color indicating that particular tab is selected*/ 
+.selected{
+    color: teal;   
+}
+/*CSS for header*/
+header{
+    background-color: white;
+}
+/*logo CSS 
+for positioning the logo to the left corner*/
+.logo{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 10px;
+}
+/*Navigation CSS
+naviagtion expands to the whole page*/
+nav{
+    width: 100%;
+    overflow: auto; 
+}
+/*since I used list, made the list style none so that the bullet points arent seen*/
+nav ul{
+    padding: 0;
+    margin: 0 0 0 150px;
+    list-style: none;
+}
+/*CSS adjusting the tabs to left and make them appear horizontally in a line */
+nav li{
+    margin-left: 40px;
+    padding: 23px;
+    position: relative;
+    float: left;
+}
+/*CSS tab links 
+making the text color black and giving it font size*/
+nav a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase ;
+    font-size: 17px;
+}
+/*CSS for login tab
+giving it text color and posiitioning it towrads the right corner */
+.logreglinks{
+    position: relative;
+    float: right;
+    margin-left: 300px;
+    color: black;
+}
+/*CSS for register tab 
+giving it text color and position it beside login tab*/
+.logreglinkstwo{
+    position: relative;
+    float: right;
+    margin-left: 0%;
+    color: black;
+    margin-right: 0%;
+}
+/*CSS for welcoming the user */
+.greet{
+    color: white;
+    font-family: "Silkscreen";
+    text-transform: uppercase;
+    font-size: 20px;
+    float: right;
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 81%;
+}
+.content{
+    font-size: large;
+    font-family: "Silkscreen";
+}
+/*CSS for game page heading*/
+.gamehead{
+    font-family: "Silkscreen";    
+    font-size: x-large;
+    text-align: center;
+    color: white;
+}
+.gamename{
+    font-family: "Silkscreen";
+    color: white;
+    font-size: 100px;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.gamenametwo{
+    font-family: "Silkscreen";
+    color: white;
+    font-size: 100px;
+    margin-left: 50%;
+    margin-top: 0;
+}
+/*CSS for the link in homepage */
+.playlink{
+    font-family: "Silkscreen";
+    color: white;
+    font-size: 20px;
+    margin-left: 45%;
+}
+/*CSS for start button in game page*/
+.startbtn {
+    font-family: "Silkscreen";
+    background-color: white;
+    font-size: 17px;
+    border:none;
+    border-radius:5px;
+    color: black;
+    margin-left: 6%;
+    padding: 10px;
+    float: left;
+}
+/*CSS for score in gaame page*/
+#score{
+    font-family: "Silkscreen";
+    font-size: 15px;
+    color: white;
+    padding-right: 5%;
+    float: right;
+}
+/*CSS for rules in rules page*/
+.rulespic{
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+/*CSS of rules page heading*/
+.ruleshead{
+    color: white;
+    font-family: "Silkscreen";     
+    font-size: x-large;
+    text-align: center;
+}
+/*CSS for leaderboard*/
+.lb{
+    display: flex;
+    align-items: center;
+    margin-left: 15%;  
+    margin-top: 10%;
+}
+/*CSS for leaderboard page heading*/
+.lbhead{
+    color: white;
+    font-family: "Silkscreen";     
+    font-size: x-large;
+    text-align: center;
+}
+/*CSS for aligning text boxes in login and register pages*/
+.row {
+    display:flex;
+    flex-direction:row;
+}
+/*CSS for text boxes in login and register pages*/
+.input-group {
+    flex:1;  
+    display:flex;
+    flex-direction:column; 
+    margin: 10px 5px;
+}
+/*CSS for the labels of text boxes*/
+label {
+    color:white;
+    font-size: 17px;
+    font-weight: 500;
+}
+/*CSS for login and register pages*/
+.signup-form, .login-form{
+    height:100%; 
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    max-width: 50%;
+    margin-top: 5%;
+    margin-bottom: auto;
+    margin-left: 25%;
+}
+/*CSS for login and register page headers */
+.form-header, .login-header {
+    font-size: 28px;
+    padding-bottom: 5%;
+    text-align:center;
+    color:white;
+    font-family: "Silkscreen"; 
+}
+/*CSS for gender options in register page*/
+.radio-group div {
+    flex:1;
+}
+/*CSS for gender label*/
+.radio-group label {
+    color:white;
+    cursor:pointer;
+}
+.radio-group{
+    display:flex;
+}   
+/*CSS for text boxes in login and register forms*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select  {
+  font-size: 18px;
+  height: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  background: white;
+  outline: none;
+}
+input::placeholder{
+    color: black;
+}
+.form-footer {
+    padding-top: 8%;
+    display:flex;
+    justify-content: center;
+}
+/*CSS for restart button*/
+.btn {
+    font-family: "Silkscreen";
+    padding:10px 20px;
+    background-color: white;
+    font-size: 20px;
+    border:none;
+    border-radius:5px;
+    color: black;
+}
+.login-input{
+    flex:1;  
+    display:flex;
+    flex-direction:column; 
+    margin: 10px 5px;
+} 
+.login-footer {
+    padding-top: 15%;
+    display:flex;
+    justify-content: center;
+}
+/*CSS for login button*/
+.lbtn{
+    font-family: "Silkscreen";
+    padding:10px 20px;
+    background-color: white;
+    font-size: 25px;
+    border:none;
+    border-radius:5px;
+    color: black;
+}
+.asteroid {
+    animation: slideout 5s linear infinite;
+}
+/*CSS for animation*/
+@keyframes slideout {
+    from {
+        margin-left: 0%;
+        width: 20%;
+    }
+    to {
+        margin-left: 100%;
+        width: 30%;
+    }
+}
+.asteroidtwo {
+    animation: slidein 5s linear infinite;
+}
+@keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 30%;
+}
+to {
+    margin-left: 0%;
+    width: 20%;
+}
+}
+/*CSS for footer*/
+footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.1%;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+#board{
+    position: relative;
+    width: 1400px;
+    height: 700px;
+    margin-top: 100px;
+    margin: 40px auto;
+    border: 2px solid white;
+    background-image: url('../Images/gamebg.png');
+} 
+body {
+    width: 100%;
+    overflow: scroll;
+}
+#board {
+position: relative;
+width: 1200px;
+height: 600px;
+margin: 40px auto;
+border: 2px solid white;
+background: url("../Images/gamebg.png");
+overflow: hidden;
+}
+
+#ship {
+position: absolute;
+width: 150px;
+height: 150px;
+background: url("../Images/spaceship.png");
+background-size: contain;
+background-repeat: no-repeat;
+bottom: 0px;
+}
+
+.bullets {
+position: absolute;
+bottom: 40px;
+width: 40px;
+height: 40px;
+background: url("../Images/bullet.png");
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.ast {
+position: absolute;
+top: 0px;
+width: 70px;
+height: 70px;
+background: url("../Images/asteroid.png");
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+table {
+    font-family: "Silkscreen";
+    border: white;
+    font-size: x-large;
+    border: 5px solid;
+    color: white;
+    width: 90%;
+    margin-right: 17%;
+    margin-top: 1%;
+}
+td, th{
+    border: 3px solid;
+    padding: 20px;
+}
+  

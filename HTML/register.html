@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Page Title-->
+        <title>Astroblast -- Register</title>
+        <!--Linking CSS Stylesheet-->
+        <link href="../CSS/stylessheet.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <header>
+            <!--div for Logo-->
+            <div class="logo" >
+                <img src="../Images/logo.png" height="10%" width="10%">
+            </div>
+            <!--Navigation Tabs-->  
+            <nav>
+                <ul>
+                    <li><a href="../HTML/index.html">Home</a></li>
+                <li><a href="../HTML/game.html">Game</a></li>
+                <li><a href="../HTML/rules.html">Rules</a></li>
+                <li><a href="../HTML/leaderboard.html">Leaderboard</a></li>
+                <li><a class="logreglinks" href="login.html">Login</a></li>
+                <li><a class="logreglinkstwo" href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--Greeting the guest but if the user login's then it will say welcome with name.-->
+        <div>
+            <p class="greet" id="greet">Welcome Guest!!</p>
+        </div>
+        <br><br><br><br>
+        <!--Page Content-->
+
+        <!--Registration form-->
+        <form class="signup-form" name="regForm">
+            <div class="form-header">
+               <h2>REGISTER</h2>
+            </div>
+            <!--Name inputs-->
+            <div class="form-body">
+                <div class="row">
+                    <div class="input-group">
+                        <label>FIRST NAME *</label>
+                        <input id="fname" type="text" name="namef" placholder="Enter your first name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>LAST NAME *</label>
+                        <input id="lname" type="text" placholder="Enter your last name" required>
+                    </div>
+                </div>
+                <!--DOB input choosen from a calender-->
+                <div class="row">
+                    <div class="input-group">
+                        <label>DOB *</label>
+                        <input id="dob" type="date" placholder="Enter your DOB" required>
+                    </div>
+                </div>
+                <!--Email input-->
+                <div class="input-group">
+                    <label>EMAIL *</label>
+                    <input id="email" type="email" placholder="Enter your email" required>
+                </div>
+                <!--Gender to be chosen-->
+                <div class="input-group">
+                    <label for="">GENDER</label>
+                    <div class="radio-group">
+                        <div>
+                            <label for="male">
+                                <input type="radio" name="gender" id="male" value="male" >
+                                MALE
+                            </label>
+                        </div>
+                        <div>
+                            <label for="female">
+                                <input type="radio" name="gender" id="female" value="female" >
+                                FEMALE
+                            </label>
+                        </div>
+                    </div>
+                    <!--Password input-->
+                    <div class="input-group">
+                        <label>PASSWORD *</label>
+                        <input id="pass" type="password" placholder="Enter your password" required>
+                    </div>
+                    <div class="input-group">
+                        <label>CONFIRM PASSWORD *</label>
+                        <input id="cpass" type="password" placholder="Enter your password again" required>
+                    </div>
+                </div>
+            </div>
+            <!--Register button will submit the form-->
+            <div class="form-footer">
+                <button class="btn" onclick="register()" return false>REGISTER</button>
+            </div>
+        </form>
+        <br><br><br><br><br><br><br>
+        <script src="../JS/register.js"></script>
+        <!--Page Footer-->
+        <footer >
+            <p>
+                EMAIL US AT <u style="font-family: arial ;">astroblast@gmail.com</u>  FOR MORE SUGGESTIOSN AND FEEDBACK <br>
+                COPYRIGHT  ©  ASTROBLAST 2022
+            </p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Page Title-->
+        <title>Astroblast -- Rules</title>
+        <!--Linking CSS Stylesheet-->
+        <link href="../CSS/stylessheet.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <header>
+            <!--div for Logo-->
+            <div class="logo" >
+                <img src="../Images/logo.png" height="10%" width="10%">
+            </div>
+            <!--Navigation Tabs-->  
+            <nav>
+                <ul>
+                    <li><a href="../HTML/index.html">Home</a></li>
+                <li><a href="../HTML/game.html">Game</a></li>
+                <li><a class="selected" href="../HTML/rules.html">Rules</a></li>
+                <li><a href="../HTML/leaderboard.html">Leaderboard</a></li>
+                <li><a class="logreglinks" href="login.html">Login</a></li>
+                <li><a class="logreglinkstwo" href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--Greeting the guest but if the user login's then it will say welcome with name.-->
+        <div>
+            <p class="greet" id="greet">Welcome Guest!!</p>
+        </div>
+        <br><br><br><br>
+
+        <!--Page Heading-->
+        <div class="ruleshead">
+            <h2>RULES</h2>
+        </div>
+        <!--Page Content-->
+        <div class="rulespic">
+            <img src="../Images/rules.png" height="60%" width="100%">
+        </div>
+        <script>
+            window.onload = checkLogin;//Check to see if user is logged in already
+
+            let usrRegister;
+
+            function checkLogin(){
+                if(sessionStorage.loggedInUsrName !== undefined){
+                    //Extract details of logged in user
+                    usrRegister = JSON.parse(localStorage[sessionStorage.loggedInUsrName]);
+                    
+                    //Greeting the user with their name 
+                    document.getElementById("greet").textContent = "WELCOME " + usrRegister.firstName;
+                    
+                }
+                else{ 
+                    document.getElementById("greet").innerHTML = "WELCOME GUEST!!";   
+                }
+            }
+
+        </script>
+        <footer >
+            <p>
+                EMAIL US AT <u style="font-family: arial ;">astroblast@gmail.com</u>  FOR MORE SUGGESTIOSN AND FEEDBACK <br>
+                COPYRIGHT  ©  ASTROBLAST 2022
+            </p>
+        </footer>
+    </body>
+</html>
